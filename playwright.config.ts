@@ -24,12 +24,12 @@ const config: PlaywrightTestConfig = {
         viewport: { width: 1280, height: 720 },
       },
     },
-    {
-      name: "MicrosoftEdge:latest:MacOS Ventura@lambdatest",
-      use: {
-        ...devices["iPhone 12 Pro Max"],
-      },
-    },
+    // {
+    //   name: "MicrosoftEdge:latest:MacOS Ventura@lambdatest",
+    //   use: {
+    //     ...devices["iPhone 12 Pro Max"],
+    //   },
+    // },
     // {
     //   name: "pw-firefox:latest:Windows 11@lambdatest",
     //   use: {

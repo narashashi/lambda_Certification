@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 import test from "../lambdatest-setup";
- // import test from '@playwright/test'
+//  import test from '@playwright/test'
 const Data = {
   URL: "https://www.lambdatest.com/selenium-playground/",
   WELCOMEMESSAGE: "Welcome to LambdaTest",
@@ -34,6 +34,7 @@ test.describe("PlayWright Assignment Test Scenarios", async () => {
   });
 
   test("Lambda Test Scenario 2", async ({ page }) => {
+    await page.waitForEvent('load')
     await page.getByRole("link", { name: "Drag & Drop Sliders" }).click();
     await page.waitForSelector("#slider3");
     let defaultValTxt = await page.locator("#rangeSuccess").innerText();
@@ -44,6 +45,7 @@ test.describe("PlayWright Assignment Test Scenarios", async () => {
   });
 
   test("Lambda Test Scenario 3", async ({ page }) => {
+    await page.waitForEvent('load')
     await page.getByRole("link", { name: "Input Form Submit" }).click();
     await page.getByRole("button", { name: "Submit" }).click();
     await page.getByPlaceholder("Name", { exact: true }).fill(Data.USERNAME);
