@@ -3,9 +3,11 @@ Project to integrate Playwright typescript with Lambdatest service
 
 #Installation process
 1. Run the below commands to install playwright
+
     command: npx playwright install
 
 2. Install playwright dependencies, run the below command
+
     command: npx playwright install-deps
 
 3. Run the below commands to add Lambda test username and Access key
